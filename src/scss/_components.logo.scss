@@ -1,0 +1,21 @@
+/* ==========================================================================
+   #LOGO
+   ========================================================================== */
+
+$logo-height:   30px;
+
+.c-logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: $unit;
+  animation: fadein 2s;
+}
+
+  .c-logo__fill {
+    fill: $color-logo;
+
+    // .c-page-head & {
+    //   fill: currentcolor;
+    // }
+
+  }

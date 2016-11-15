@@ -1,0 +1,81 @@
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+
+// Set up a color palette which allows us to theme the entire project from one
+// location.
+
+// Color palette.
+$color-brand-primary:               #ed1bed;
+$color-brand-primary-highlight:     lighten($color-brand-primary, 5%);
+// $color-brand-primary-shadow:        darken($color-brand-primary,  5%);
+$color-brand-primary-shadow:        #8e108e;
+
+$color-brand-secondary:             #007fc4;
+$color-brand-secondary-highlight:   lighten($color-brand-secondary, 5%);
+$color-brand-secondary-shadow:      darken($color-brand-secondary,  5%);
+
+$color-ui:                          #e4e4e4;
+
+$color-gray:                        #95989a;
+$color-gray-dark:                   #333;
+$color-gray-light:                  #f9f9f9;
+$color-white:                       #fff;
+$color-black:                       #000;
+
+
+
+
+
+// Theme colors.
+$color-theme-red:                   #c00;
+
+
+
+
+
+// Reassign literal variables to meaningful ones.
+$color-page-text:                       $color-gray;
+$color-page-background:                 $color-white;
+
+$color-logo:                            $color-white;
+
+$color-band-tint:                       $color-gray-light;
+
+$color-highlight:                       $color-brand-primary;
+
+$color-links:                           inherit;
+$color-links-prose:                     $color-brand-primary;
+$color-links-prose-hover:               $color-brand-primary-shadow;
+
+$color-page-head:                       #fff;
+$color-page-head-background:            #28162b;
+
+$color-masthead-background:             $color-brand-primary;
+
+$color-stat-title:                      $color-brand-secondary;
+
+$color-btn:                             #fff;
+$color-btn-background:                  $color-brand-primary;
+$color-btn-background-hover:            $color-brand-primary-shadow;
+$color-btn-secondary:                   #fff;
+$color-btn-secondary-background:        $color-brand-secondary;
+$color-btn-secondary-background-hover:  $color-brand-secondary-shadow;
+
+$color-page-foot:                       #fff;
+$color-page-foot-background:            $color-gray-dark;;
+
+$color-panel-background:                #fff;
+$color-panel-inverse:                   #fff;
+$color-panel-inverse-background:        $color-brand-primary;
+$color-panel-link:                      $color-gray-dark;
+$color-panel-link-hover:                $color-brand-primary;
+
+$color-testimonial-background:          #fff;
+$color-testimonial-border:              $color-brand-primary;
+$color-testimonial-source:              $color-gray;
+
+$color-headline:                        $color-gray-light;
+
+$color-sub-content-bg:                  rgba(0, 0, 0, 0.05);
+$color-sub-content:                     $color-gray;

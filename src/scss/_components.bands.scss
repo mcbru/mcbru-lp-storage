@@ -1,0 +1,79 @@
+/* ==========================================================================
+   #BANDS
+   ========================================================================== */
+
+
+.c-band {
+  text-align: center;
+  h1, h2 {
+    @include font-weight(normal);
+  }
+  p {
+    text-align: left;
+  }
+  padding-top: $unit-large;
+  padding-bottom: $unit-large;
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+
+.c-band--tint {
+  background-color: $color-band-tint;
+}
+
+
+
+
+
+/* Background variants
+   ========================================================================== */
+
+.c-band--image {
+  @include mq($from: small) {
+    padding-top: $unit-huge;
+    padding-bottom: $unit-huge;
+  }
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+}
+
+.c-band--image__1 {
+  background-image: url(../images/earth-from-space.jpg);
+  @include mq($from: medium) {
+    background-position: 0 $unit-large;
+  }
+  h1 {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+}
+
+.c-band--image__2 {
+  background-image: url(../images/designer.jpg);
+}
+
+.c-band--image__3 {
+  background-image: url(../images/pen.jpg);
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-band--small {
+  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.c-band--large {
+  padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+}

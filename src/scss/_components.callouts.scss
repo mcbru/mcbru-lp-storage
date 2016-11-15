@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #CALLOUTS
+   ========================================================================== */
+
+p.c-callout {
+  @include font-family(handwriting);
+  color: $color-highlight;
+  @include font-size(30px);
+  @include mq($until: medium) {
+    text-align: center;
+  }
+}

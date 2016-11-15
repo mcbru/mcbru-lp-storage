@@ -1,0 +1,25 @@
+///* ========================================================================
+//   #ALIGNMENT
+//   ======================================================================== */
+
+// Mixins to help align content.
+
+
+
+
+
+// Center-align in container.
+// If using inuitcss grid, look at "o-layout__middle" before resorting to this method.
+//
+// Add to element like so:
+// .element {
+//   @include vertical-center();
+// }
+
+@mixin vertical-center($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

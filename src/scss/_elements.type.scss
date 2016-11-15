@@ -1,0 +1,12 @@
+///* ========================================================================
+//   #TYPE
+//   ======================================================================== */
+
+// Typographical base selectors.
+
+
+// Highlighted text.
+b {
+  color: $color-highlight;
+  @include font-weight(normal);
+}

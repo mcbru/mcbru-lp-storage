@@ -1,0 +1,237 @@
+/* ==========================================================================
+   #STATS
+   ========================================================================== */
+
+// VARIABLES
+$default-delay: .2s;
+$bars: 2;
+$graph-height: 253px;
+
+// MIXINS
+
+//Horizontal Bar Color Mixin
+// @mixin stat-bar($color-dark, $color-light, $direction, $dir-webkit) {
+//   background-image: -webkit-linear-gradient($dir-webkit, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
+//   background-image: linear-gradient($direction, $color-light 0%, $color-light 47%, $color-dark 50%, $color-dark 100%);
+// }
+// Animation Mixin
+@mixin bar-animation($time, $dimension) {
+  @if $dimension == width {
+    width: 0;
+    animation: animate-width;
+  }
+  @if $dimension == height {
+    height: 0;
+    animation: animate-height;
+  }
+  animation-timing-function: cubic-bezier(.35,.95,.67,.99);
+  animation-duration: $time*2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes animate-height {
+  0% {
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+//STYLES
+.stat {
+  margin-bottom: $unit-large;
+  > p {
+    text-align: center;
+  }
+}
+
+.c-stat__title {
+  background-color: $color-stat-title;
+  color: $color-white;
+  @include mq($until: small) {
+    @include font-size(12px, 3.5);
+  }
+  @include font-weight(bold);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3;
+  background-repeat: no-repeat;
+  &.c-stat__title--clickthrough {
+    background-image: url(../images/icon-clickthrough.png);
+    background-size: 27px;
+    background-position: 0.5em 0.5em;
+    @include mq($from: small) {
+      background-size: 35px;
+      background-position: 0.5em 0.5em;
+    }
+  }
+  &.c-stat__title--conversion {
+    background-image: url(../images/icon-conversion.png);
+    background-size: 20px;
+    background-position: 0.5em 1em;
+    margin-bottom: 3*$unit;
+    @include mq($from: small) {
+      background-size: 26px;
+      background-position: 0.8em 0.8em;
+    }
+  }
+  &.c-stat__title--pipeline {
+    background-image: url(../images/icon-pipeline.png);
+    background-position: 0.8em 1.3em;
+    background-size: 20px;
+    @include mq($from: small) {
+      background-size: 30px;
+      background-position: 0.8em 1.1em;
+    }
+  }
+}
+
+.bar-animated {
+  @include bar-animation($default-delay, height);
+}
+
+.bar-chart {
+  // height: 380px;
+  height: 340px;
+  width: 80%;
+  position: relative;
+  margin: 50px auto 0;
+  * {
+   box-sizing: border-box;
+  }
+  .graph {
+    // color: #cdcdcd;
+    height: 283px;
+    position: relative;
+  }
+  .bars {
+    height: $graph-height;
+    padding: 0 2%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  .bar-group {
+    display: block;
+    // float: left;
+    height: 100%;
+    position: relative;
+    // width: 12%;
+    width: 100%;
+    margin-right: 10%;
+    &:last-child {
+     margin-right: 0;
+    }
+    .bar {
+      visibility: hidden;
+      // box-shadow: 1px 0 2px rgba(0,0,0,.15);
+      // border: 1px solid #2d2d2d;
+      // border-radius: 3px 3px 0 0;
+      bottom: 0;
+      // cursor: pointer;
+      height: 0;
+      position: absolute;
+      // text-align: center;
+      width: 40%;
+      &:nth-child(2) {
+        left: 50%;
+      }
+      // &:nth-child(3) {
+      //   left: 70%;
+      // }
+      &.bar-2 {
+        color: $color-brand-primary;
+      }
+      span {
+        position: absolute;
+        top: -40px;
+        @include font-size(28px);
+        @include mq($from: small) {
+          top: -60px;
+        }
+        @include font-weight(bold);
+        @include mq($from: small) {
+          @include font-size(36px);
+        }
+      }
+    }
+    @for $i from 1 through $bars {
+      .bar-#{$i} {
+        animation-delay: $default-delay+.1*$i;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .x-axis {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    li {
+      position: absolute;
+      text-align: center;
+      // float: left;
+      margin-right: 10.5%;
+      @include font-weight(bold);
+      @include font-size(14px, 1.5);
+      // font-size: 11px;
+      // width: 11.5%;
+      width: 40%;
+      &:nth-child(2) {
+        left: 50%;
+      }
+      &:last-child {
+       margin-right: 0;
+      }
+    }
+  }
+  .y-axis {
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    li {
+      border-top: 1px solid #cdcdcd;
+      display: block;
+      height: $graph-height/4;
+      width: 100%;
+      span {
+        display: block;
+        font-size: 11px;
+        margin: -10px 0 0 -60px;
+        padding: 0 10px;
+        width: 40px;
+      }
+    }
+  }
+  .stat-1 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c4c4c4+0,909090+100 */
+    background: #c4c4c4; /* Old browsers */
+    background: -moz-linear-gradient(left,  #c4c4c4 0%, #909090 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #c4c4c4 0%,#909090 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #c4c4c4 0%,#909090 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4c4c4', endColorstr='#909090',GradientType=1 ); /* IE6-9 */
+  }
+  .stat-2 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed1bed+0,770e77+100 */
+    background: #ed1bed; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ed1bed 0%, #770e77 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ed1bed 0%,#770e77 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ed1bed 0%,#770e77 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1bed', endColorstr='#770e77',GradientType=1 ); /* IE6-9 */
+    // @include stat-bar($color-brand-primary, $color-brand-primary, to right, left);
+  }
+}

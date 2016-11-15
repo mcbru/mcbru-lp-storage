@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #PAGE-HEAD
+   ========================================================================== */
+
+.c-page-head {
+  @include inuit-clearfix();
+  background-color: $color-page-head-background;
+  color: $color-page-head;
+  padding: $unit;
+
+  &.is-fixed {
+
+    @include mq($from: medium) {
+      position: fixed;
+      top:   0;
+      right: 0;
+      left:  0;
+      z-index: 100;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+  }
+
+}
+
+  .c-page-head__btn {
+    // line-height: 0;
+    float: right;
+  }
+
+  /**
+   * 1. The height of the nav needs to marry up with the height of the logo.
+   */
+  .c-page-head__nav {
+    float: right;
+    // line-height: $logo-height; /* [1] */
+  }
