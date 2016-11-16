@@ -28,7 +28,7 @@ $(function(){
     enter: function(direction) {
       container5.html(gross_opp_pipeline);
     }
-  })
+  });
 
   // var container6 = $('.c-band--image__1');
   // var container6_elements = $('.c-band--image__1 h1, .c-band--image__1 svg');
@@ -112,7 +112,7 @@ $(function(){
       container3_element.addClass('bar-animated').css({'animation-delay': '1s'});
       $('.c-callout--1').addClass('fadeIn').addClass('animated').css({'animation-delay': '1s'});
     }
-  })
+  });
 
   var container4 = $('.bar-group--2');
   var container4_element = $('.bar-group--2 .bar');
@@ -122,5 +122,5 @@ $(function(){
       container4_element.addClass('bar-animated').css({'animation-delay': '1s'});
       $('.c-callout--2').addClass('fadeIn').addClass('animated').css({'animation-delay': '1s'});
     }
-  })
+  });
 });
