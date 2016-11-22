@@ -4,6 +4,8 @@
 
 $(function(){
 
+  $('.c-slider').unslider();
+
   // $.fn.scrollView = function () {
   //   return this.each(function () {
   //     $('html, body').animate({
