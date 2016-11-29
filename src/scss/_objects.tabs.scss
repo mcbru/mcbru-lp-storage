@@ -1,0 +1,89 @@
+/* ==========================================================================
+   #TABS
+   ========================================================================== */
+
+/**
+ * Responsive pure CSS tabs, using radio controls
+ * http://codepen.io/mikestreety/pen/yVNNNm
+ */
+
+.o-tabs {
+  display: flex;
+  flex-wrap: wrap; // make sure it wraps
+  label[for="tabone"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+  label[for="tabtwo"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+  label[for="tabthree"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+  label[for="tabfour"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+  label[for="tabfive"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+  label[for="tabsix"] {
+    background-image: url('../images/asigra-mono.svg');
+  }
+}
+
+.o-tabs label {
+  order: 1; // Put the labels first
+  display: block;
+  // padding: 1rem 2rem;
+  width: 6em;
+  height: 3em;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  // background: #90CAF9;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 5em;
+  font-weight: bold;
+  transition: background ease 0.2s;
+  span {
+    @include inuit-hidden-visually();
+  }
+}
+
+.o-tabs .o-tabs__item {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background: $color-white;
+}
+
+.o-tabs input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.o-tabs input[type="radio"]:checked + label {
+  // background: $color-white;
+  background-repeat: no-repeat;
+}
+
+.o-tabs input[type="radio"]:checked + label[for="tabone"] {
+  background-image: url('../images/asigra-color.svg');
+}
+
+.o-tabs input[type="radio"]:checked + label + .o-tabs__item {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .o-tabs .o-tabs__item,
+  .o-tabs label {
+    order: initial;
+  }
+  .o-tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
