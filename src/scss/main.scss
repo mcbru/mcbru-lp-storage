@@ -135,6 +135,7 @@ $mq-breakpoints: (
 @import "./node_modules/inuitcss/elements/elements.images";
 // @import "./node_modules/inuitcss/elements/elements.tables";
 @import "elements.type";
+@import "elements.links";
 
 
 
@@ -174,8 +175,7 @@ $mq-breakpoints: (
 @import "components.stats";
 @import "components.callouts";
 @import "components.odometer";
-// Unslider
-@import "components.slider";
+@import "components.magnific-popup";
 
 
 

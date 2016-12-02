@@ -23,7 +23,7 @@
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "lint": "eslint src/js",
-    "uglify": "mkdir -p dist/js && uglifyjs node_modules/jquery/dist/jquery.min.js node_modules/waypoints/lib/jquery.waypoints.min.js node_modules/waypoints/lib/shortcuts/inview.min.js node_modules/odometer/odometer.min.js node_modules/unslider/dist/js/unslider-min.js src/js/main.js -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js && uglifyjs src/js/*.js --source-map dist/js/app.js.map",
+    "uglify": "mkdir -p dist/js && uglifyjs node_modules/jquery/dist/jquery.min.js node_modules/waypoints/lib/jquery.waypoints.min.js node_modules/waypoints/lib/shortcuts/inview.min.js node_modules/odometer/odometer.min.js src/js/magnific-popup.js src/js/main.js -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js && uglifyjs src/js/*.js --source-map dist/js/app.js.map",
     "imagemin": "cp src/images/* dist/images",
     "serve": "browser-sync start --server --startPath \"dist/\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
     "build:css": "npm run scss && npm run autoprefixer",
@@ -38,7 +38,6 @@
   },
   "devDependencies": {
     "animate-sass": "git+https://github.com/tgdev/animate-sass.git",
-    "unslider": "git+https://github.com/idiot/unslider.git",
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.8",
     "eslint": "^3.10.1",

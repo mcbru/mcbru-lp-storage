@@ -11,22 +11,22 @@
   display: flex;
   flex-wrap: wrap; // make sure it wraps
   label[for="tabone"] {
-    background-image: url('../images/asigra-mono.svg');
+    background-image: url('../images/cloudian-mono.svg');
   }
   label[for="tabtwo"] {
     background-image: url('../images/asigra-mono.svg');
   }
   label[for="tabthree"] {
-    background-image: url('../images/asigra-mono.svg');
+    background-image: url('../images/panasas-mono.svg');
   }
   label[for="tabfour"] {
-    background-image: url('../images/asigra-mono.svg');
+    background-image: url('../images/isilon-mono.png');
   }
   label[for="tabfive"] {
-    background-image: url('../images/asigra-mono.svg');
+    background-image: url('../images/polyserve-mono.png');
   }
   label[for="tabsix"] {
-    background-image: url('../images/asigra-mono.svg');
+    background-image: url('../images/integra-mono.png');
   }
 }
 
@@ -34,16 +34,19 @@
   order: 1; // Put the labels first
   display: block;
   // padding: 1rem 2rem;
-  width: 6em;
-  height: 3em;
-  margin-right: 0.2rem;
+  width: 7em;
+  height: 7em;
+  border-radius: 4em;
+  // margin-right: 0.2rem;
+  margin-right: $unit;
+  margin-bottom: $unit;
   cursor: pointer;
   // background: #90CAF9;
   background-repeat: no-repeat;
-  background-position: 10px 10px;
+  background-position: 21px 53px;
   background-size: 5em;
   font-weight: bold;
-  transition: background ease 0.2s;
+  transition: background ease 0.3s;
   span {
     @include inuit-hidden-visually();
   }
@@ -53,9 +56,13 @@
   order: 99; // Put the tabs last
   flex-grow: 1;
   width: 100%;
-  display: none;
-  padding: 1rem;
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
   background: $color-white;
+  transition: visibility ease 0.5s, opacity ease 0.5s;
+  height: 0;
+  overflow: hidden;
 }
 
 .o-tabs input[type="radio"] {
@@ -64,16 +71,40 @@
 }
 
 .o-tabs input[type="radio"]:checked + label {
-  // background: $color-white;
+  background-color: $color-white;
   background-repeat: no-repeat;
 }
 
 .o-tabs input[type="radio"]:checked + label[for="tabone"] {
+  background-image: url('../images/cloudian-color.svg');
+}
+
+.o-tabs input[type="radio"]:checked + label[for="tabtwo"] {
   background-image: url('../images/asigra-color.svg');
 }
 
+.o-tabs input[type="radio"]:checked + label[for="tabthree"] {
+  background-image: url('../images/panasas-color.svg');
+}
+
+.o-tabs input[type="radio"]:checked + label[for="tabfour"] {
+  background-image: url('../images/isilon-color.png');
+}
+
+.o-tabs input[type="radio"]:checked + label[for="tabfive"] {
+  background-image: url('../images/polyserve-color.png');
+}
+
+.o-tabs input[type="radio"]:checked + label[for="tabsix"] {
+  background-image: url('../images/integra-color.png');
+}
+
 .o-tabs input[type="radio"]:checked + label + .o-tabs__item {
-  display: block;
+  // display: block;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  padding: $unit;
 }
 
 @media (max-width: 45em) {

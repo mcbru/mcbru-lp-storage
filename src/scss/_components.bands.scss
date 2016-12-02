@@ -8,7 +8,7 @@
   h1, h2 {
     @include font-weight(normal);
   }
-  p {
+  p, ul, ol, li {
     text-align: left;
   }
   padding-top: $unit-large;
