@@ -30,25 +30,38 @@
   }
 }
 
+
+.o-tabs .o-tabs__item, .o-tabs label {
+  order: initial;
+}
+
 .o-tabs label {
-  order: 1; // Put the labels first
   display: block;
+  width: 100%;
+  height: 6em;
   // padding: 1rem 2rem;
-  width: 7em;
-  height: 7em;
   border-radius: 4em;
   // margin-right: 0.2rem;
-  margin-right: $unit;
   margin-bottom: $unit;
+  margin-right: 0;
   cursor: pointer;
-  // background: #90CAF9;
+  background-size: 8em;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: 21px 53px;
-  background-size: 5em;
   font-weight: bold;
   transition: background ease 0.3s;
   span {
     @include inuit-hidden-visually();
+  }
+}
+
+@include mq($from: small) {
+  .o-tabs label {
+    background-size: 5em;
+    margin-right: $unit;
+    order: 1; // Put the labels first
+    width: 8em;
+    height: 8em;
   }
 }
 
@@ -105,16 +118,4 @@
   opacity: 1;
   height: auto;
   padding: $unit;
-}
-
-@media (max-width: 45em) {
-  .o-tabs .o-tabs__item,
-  .o-tabs label {
-    order: initial;
-  }
-  .o-tabs label {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 0.2rem;
-  }
 }

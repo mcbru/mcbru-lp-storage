@@ -112,6 +112,7 @@ $mq-breakpoints: (
 @import "tools.aliases";
 @import "tools.typography";
 @import "tools.alignment";
+@import "tools.mixins";
 
 
 
@@ -172,6 +173,7 @@ $mq-breakpoints: (
 @import "components.bands";
 @import "components.page-head";
 @import "components.logo";
+@import "components.icons";
 @import "components.stats";
 @import "components.callouts";
 @import "components.odometer";
@@ -191,3 +193,4 @@ $inuit-offsets: true;
 @import "./node_modules/inuitcss/utilities/utilities.print";
 @import "./node_modules/inuitcss/utilities/utilities.hide";
 @import "utilities.alignment";
+@import "utilities.type";

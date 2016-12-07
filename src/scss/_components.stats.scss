@@ -150,7 +150,7 @@ $graph-height: 253px;
       //   left: 70%;
       // }
       &.bar-2 {
-        color: $color-brand-primary;
+        color: $color-theme-primary;
       }
       span {
         position: absolute;
@@ -232,6 +232,6 @@ $graph-height: 253px;
     background: -webkit-linear-gradient(left,  #ed1bed 0%,#770e77 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  #ed1bed 0%,#770e77 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1bed', endColorstr='#770e77',GradientType=1 ); /* IE6-9 */
-    // @include stat-bar($color-brand-primary, $color-brand-primary, to right, left);
+    // @include stat-bar($color-theme-primary, $color-theme-primary, to right, left);
   }
 }

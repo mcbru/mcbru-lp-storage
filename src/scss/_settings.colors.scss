@@ -5,20 +5,37 @@
 // Set up a color palette which allows us to theme the entire project from one
 // location.
 
-// Color palette.
-$color-brand-primary:               #ed1bed;
-$color-brand-primary-highlight:     lighten($color-brand-primary, 5%);
-// $color-brand-primary-shadow:        darken($color-brand-primary,  5%);
-$color-brand-primary-shadow:        #8e108e;
 
-$color-brand-secondary:             #007fc4;
-$color-brand-secondary-highlight:   lighten($color-brand-secondary, 5%);
-$color-brand-secondary-shadow:      darken($color-brand-secondary,  5%);
+// McBru Brand Colors
+$color-brand-technoviolet: #8e108e;
+$color-brand-fuchsia: #ed1bed;
+$color-brand-gray: #A0968A;
+$color-brand-red: #DA002B;
+$color-brand-green: #AEC02F;
+$color-brand-orange: #EF8E2D;
+$color-brand-blue: #007FC4;
+$color-brand-aqua: #00907E;
+$color-brand-yellow: #EBCE24;
+
+
+
+
+// Theme colors.
+$color-theme-primary:               $color-brand-fuchsia;
+$color-theme-primary-highlight:     lighten($color-theme-primary, 10%);
+$color-theme-primary-shadow:        darken($color-theme-primary,  10%);
+$color-theme-primary-dark:          $color-brand-technoviolet;
+
+$color-theme-secondary:             $color-brand-green;
+$color-theme-secondary-highlight:   lighten($color-theme-secondary, 10%);
+$color-theme-secondary-shadow:      darken($color-theme-secondary,  10%);
+
 
 $color-ui:                          #e4e4e4;
 
 $color-gray:                        #95989a;
-$color-gray-dark:                   #333;
+// $color-gray-dark:                   #333;
+$color-gray-dark:                   #666666;
 $color-gray-light:                  #f9f9f9;
 $color-white:                       #fff;
 $color-black:                       #000;
@@ -26,56 +43,49 @@ $color-black:                       #000;
 
 
 
-
-// Theme colors.
-$color-theme-red:                   #c00;
-
-
-
-
-
 // Reassign literal variables to meaningful ones.
-$color-page-text:                       $color-gray;
+$color-page-text:                       $color-gray-dark;
 $color-page-background:                 $color-white;
 
 $color-logo:                            $color-white;
 
 $color-band-tint:                       $color-gray-light;
 
-$color-highlight:                       $color-brand-primary;
+$color-highlight:                       $color-theme-primary;
 
 $color-links:                           inherit;
-$color-links-prose:                     $color-brand-primary;
-$color-links-prose-hover:               $color-brand-primary-shadow;
+$color-links-prose:                     $color-theme-primary;
+$color-links-prose-hover:               $color-theme-primary-shadow;
 
 $color-page-head:                       #fff;
 $color-page-head-background:            #28162b;
 
-$color-masthead-background:             $color-brand-primary;
+$color-masthead-background:             $color-theme-primary;
 
-$color-stat-title:                      $color-brand-secondary;
+$color-stat-title:                      $color-theme-secondary;
 
 $color-btn:                             #fff;
-$color-btn-background:                  $color-brand-primary;
-$color-btn-background-hover:            $color-brand-primary-shadow;
+$color-btn-background:                  $color-theme-primary;
+$color-btn-background-hover:            $color-theme-primary-shadow;
 $color-btn-secondary:                   #fff;
-$color-btn-secondary-background:        $color-brand-secondary;
-$color-btn-secondary-background-hover:  $color-brand-secondary-shadow;
+$color-btn-secondary-background:        $color-theme-secondary;
+$color-btn-secondary-background-hover:  $color-theme-secondary-shadow;
 
 $color-page-foot:                       #fff;
 $color-page-foot-background:            $color-gray-dark;;
 
 $color-panel-background:                #fff;
 $color-panel-inverse:                   #fff;
-$color-panel-inverse-background:        $color-brand-primary;
+$color-panel-inverse-background:        $color-theme-primary;
 $color-panel-link:                      $color-gray-dark;
-$color-panel-link-hover:                $color-brand-primary;
+$color-panel-link-hover:                $color-theme-primary;
 
 $color-testimonial-background:          #fff;
-$color-testimonial-border:              $color-brand-primary;
+$color-testimonial-border:              $color-theme-primary;
 $color-testimonial-source:              $color-gray;
 
 $color-headline:                        $color-gray-light;
+$color-heading:                         $color-theme-primary-dark;
 
 $color-sub-content-bg:                  rgba(0, 0, 0, 0.05);
 $color-sub-content:                     $color-gray;

@@ -4,7 +4,7 @@
 }
 
 .odometer {
-  color: $color-brand-primary-shadow;
+  color: $color-theme-primary-shadow;
   @include font-weight(bold);
   @include font-size(36px);
   .odometer-inside:before {

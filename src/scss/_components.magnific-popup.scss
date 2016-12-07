@@ -587,10 +587,27 @@ button {
   }
 }
 
-.c-magnific-popup a {
+.c-magnific-popup {
+  column-count: 4;
+  column-gap: 0;
+}
+
+.c-magnific-popup__item {
   width: $unit-huge;
   display: block;
   float: right;
-  margin-right: $unit;
-  border: 1px solid $color-brand-primary;
+  // margin-right: $unit;
+  margin-bottom: $unit;
+  border: 1px solid $color-theme-primary;
+  break-inside: avoid;
 }
+
+@include mq($from: small) {
+  .c-magnific-popup {
+    column-count: 2;
+  }
+  .c-magnific-popup__item {
+    width: $unit-huge;
+  }
+}
+

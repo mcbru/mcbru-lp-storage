@@ -5,4 +5,10 @@
 a {
   text-decoration: none;
   color: $color-links-prose;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-links-prose-hover;
+    // text-decoration: underline;
+  }
 }
