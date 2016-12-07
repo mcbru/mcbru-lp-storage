@@ -4,6 +4,25 @@
 
 .c-keystones {
   p {
-    @include font-size(16px);
+    margin-bottom: $unit-large;
+    padding: 0 $unit;
+  }
+}
+
+@include mq($from: small, $until: medium) {
+  .c-keystones {
+    p {
+      padding: 0 $unit-large;
+    }
+  }
+}
+
+@include mq($from: medium) {
+  .c-keystones {
+    p {
+      @include font-size(16px);
+      margin-bottom: 0;
+      padding: 0;
+    }
   }
 }
