@@ -1,10 +1,9 @@
 /* ==========================================================================
-   #ICONS
+   #KEYSTONES
    ========================================================================== */
 
-.c-icon {
-  margin-bottom: $unit/2;
-  .c-icon__fill {
-    fill: $color-theme-secondary;
+.c-keystones {
+  p {
+    @include font-size(16px);
   }
 }

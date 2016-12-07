@@ -588,26 +588,38 @@ button {
 }
 
 .c-magnific-popup {
-  column-count: 4;
+  column-width: $unit-huge;
   column-gap: 0;
 }
 
 .c-magnific-popup__item {
-  width: $unit-huge;
+  width: 100%;
   display: block;
-  float: right;
-  // margin-right: $unit;
   margin-bottom: $unit;
   border: 1px solid $color-theme-primary;
   break-inside: avoid;
 }
 
 @include mq($from: small) {
-  .c-magnific-popup {
-    column-count: 2;
-  }
+  // .c-magnific-popup {
+    // column-count: 2;
+    // column-gap: $unit;
+  // }
   .c-magnific-popup__item {
     width: $unit-huge;
+    // margin-right: $unit;
   }
 }
 
+@include mq($from: medium) {
+  .c-magnific-popup__item {
+    float: right;
+  }
+}
+
+@include mq($from: tiny, $until: large) {
+  .c-magnific-popup {
+    column-gap: $unit;
+    // column-count: 2;
+  }
+}
