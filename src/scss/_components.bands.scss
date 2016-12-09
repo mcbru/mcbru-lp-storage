@@ -47,6 +47,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $color-white;
+  @include headings() {
+    color: $color-white;
+  }
 }
 
 .c-band--image__1 {
