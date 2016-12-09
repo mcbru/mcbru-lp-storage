@@ -598,6 +598,7 @@ button {
   margin-bottom: $unit;
   border: 1px solid $color-theme-primary;
   break-inside: avoid;
+  position: relative;
 }
 
 @include mq($from: small) {
