@@ -76,7 +76,7 @@
 }
 
 @function inline-svg($string) {
-  @return url('data:image/svg+xml;utf8,#{url-encode($string)}');
+  @return url('data:image/svg+xml;charset=utf8,#{url-encode($string)}');
 }
 
 
