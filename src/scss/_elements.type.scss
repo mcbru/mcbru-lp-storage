@@ -17,3 +17,9 @@ b {
   color: $color-highlight;
   @include font-weight(normal);
 }
+
+// Strong text.
+strong {
+  color: $color-strong;
+  @include font-weight(bold);
+}
