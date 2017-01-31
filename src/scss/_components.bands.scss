@@ -39,10 +39,6 @@
    ========================================================================== */
 
 .c-band--image {
-  @include mq($from: small) {
-    padding-top: $unit-huge;
-    padding-bottom: $unit-huge;
-  }
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,6 +50,10 @@
 
 .c-band--image__1 {
   background-image: url(../images/earth-from-space.jpg);
+  @include mq($from: small) {
+    padding-top: $unit-huge;
+    padding-bottom: $unit-huge;
+  }
   @include mq($from: medium) {
     background-position: 0 $unit-large;
   }
