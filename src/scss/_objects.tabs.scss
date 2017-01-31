@@ -70,7 +70,10 @@ $tab-bg-color: $color-white;
   .o-tabs label {
     background-size: 5em;
     border-radius: 2em;
-    margin-right: $unit;
+    margin-right: 2rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
     order: 1; // Put the labels first
     width: 8em;
     height: 4em;
