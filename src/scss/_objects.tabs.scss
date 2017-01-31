@@ -9,6 +9,12 @@
 
 $tab-bg-color: $color-white;
 
+.o-tabs__intro-text {
+  @include font-size(22px);
+  color: $color-white;
+  margin-bottom: $unit;
+}
+
 .o-tabs {
   display: flex;
   flex-wrap: wrap; // make sure it wraps
