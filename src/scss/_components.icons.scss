@@ -3,6 +3,12 @@
    ========================================================================== */
 
 .c-icon {
+  h3 {
+    color: $color-theme-secondary;
+  }
+}
+
+.c-icon__item {
   margin-bottom: $unit/2;
   .c-icon__fill {
     fill: $color-theme-secondary;
